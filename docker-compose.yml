@@ -1,0 +1,11 @@
+services:
+  ccs-lms:
+    container_name: lms
+    image: mongo:latest
+    volumes:
+      - mongodb_data_lms:/var/lib/mongodb
+    ports:
+      - "27017:27017"
+ 
+volumes:
+  mongodb_data_lms:
