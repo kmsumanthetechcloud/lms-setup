@@ -1,0 +1,33 @@
+<VirtualHost *:80>
+ 
+ 
+ServerName emghr.ie
+ 
+ServerAlias www.emghr.ie
+ 
+DocumentRoot /home/emg_hr/public_html
+ 
+ 
+<Directory "/home/emg_hr/public_html">
+ 
+        Options -Indexes +FollowSymLinks +MultiViews
+ 
+        AllowOverride All
+ 
+        Require all granted
+ 
+    </Directory>
+ 
+Protocols h2 h2c
+ 
+Include conf-available/serve-cgi-bin.conf
+ 
+ 
+<Files .env>
+ 
+Order allow,deny
+ 
+Deny from all
+ 
+</Files>
+</VirtualHost>
